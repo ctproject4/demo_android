@@ -15,9 +15,18 @@ buildscript {
 allprojects {
     repositories {
         jcenter()
-    }
+    }    
 }
+
+  test {
+    reports {
+        junitXml.enabled = false
+        html.enabled = true
+    }               
+}
+
 
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+
