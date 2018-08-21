@@ -29,3 +29,10 @@ android {
           abortOnError false
       }
   }
+  
+  test {
+    reports {
+        junitXml.enabled = false
+        html.enabled = true
+    }               
+}
